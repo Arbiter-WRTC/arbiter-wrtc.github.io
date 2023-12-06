@@ -1,6 +1,9 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import dotenv from 'dotenv';
+
+dotenv.config({path: './.env.local'})
 
 const config: Config = {
   title: 'Arbiter',
@@ -65,7 +68,7 @@ const config: Config = {
       },
       items: [
         {to: '/case-study', label: 'Case-Study', position: 'right'},
-        {to: '/docs', label: 'Docs', position: 'right'},
+        // {to: '/docs', label: 'Docs', position: 'right'},
         {to: '/#team', label: 'Team', position: 'right'},
         {to: 'https://github.com/Arbiter-WRTC/', label: 'GitHub', position: 'right'},
       ],
@@ -85,10 +88,10 @@ const config: Config = {
               label: "Case Study",
               href: "/case-study",
             },
-            {
-              label: "Documentation",
-              href: "/docs",
-            },
+            // {
+            //   label: "Documentation",
+            //   href: "/docs",
+            // },
           ],
         },
         {
@@ -100,7 +103,7 @@ const config: Config = {
             },
             {
               label: "Tech Talk",
-              href: "placeholder.com",
+              href: "https://placeholder.com",
             },
           ],
         },

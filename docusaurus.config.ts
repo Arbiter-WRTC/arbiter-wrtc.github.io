@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import dotenv from 'dotenv';
 
-dotenv.config({path: './.env.local'})
+dotenv.config({path: './.env.local'});
 
 const config: Config = {
   title: 'Arbiter',
@@ -11,7 +11,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://arbiter-framework.com',
+  url: 'https://Arbiter-WRTC.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +19,9 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Arbiter-WRTC', // Usually your GitHub org/user name.
-  projectName: 'Arbiter-WRTC', // Usually your repo name.
+  projectName: 'Arbiter-WRTC.github.io', // Usually your repo name.
+  trailingSlash: false,
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -68,7 +70,7 @@ const config: Config = {
       },
       items: [
         {to: '/case-study', label: 'Case-Study', position: 'right'},
-        // {to: '/docs', label: 'Docs', position: 'right'},
+        //{to: '/docs', label: 'Docs', position: 'right'},
         {to: '/#team', label: 'Team', position: 'right'},
         {to: 'https://github.com/Arbiter-WRTC/', label: 'GitHub', position: 'right'},
       ],
@@ -88,10 +90,7 @@ const config: Config = {
               label: "Case Study",
               href: "/case-study",
             },
-            // {
-            //   label: "Documentation",
-            //   href: "/docs",
-            // },
+            // stas
           ],
         },
         {

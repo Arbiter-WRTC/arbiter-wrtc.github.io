@@ -4,11 +4,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Arbiter',
-  tagline: 'Arbiter wrtc',
+  tagline: 'Arbiter Framework',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://arbiter-framework.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -64,64 +64,48 @@ const config: Config = {
         src: 'img/arbiter-transparent.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'right',
-          label: 'Deez',
-        },
         {to: '/case-study', label: 'Case-Study', position: 'right'},
-        {
-          href: 'https://github.com/Arbiter-WRTC/',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/docs', label: 'Docs', position: 'right'},
+        {to: '/#team', label: 'Team', position: 'right'},
+        {to: 'https://github.com/Arbiter-WRTC/', label: 'GitHub', position: 'right'},
       ],
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: "Arbiter Logo",
+        src: "img/arbiter-transparent.png",
+        width: 80,
+      },
       links: [
         {
-          title: 'Docs',
+          title: 'Navigation',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: "Case Study",
+              href: "/case-study",
+            },
+            {
+              label: "Documentation",
+              href: "/docs",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "More",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "GitHub",
+              href: "https://github.com/Arbiter-WRTC",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: "Tech Talk",
+              href: "placeholder.com",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Arbiter`,
     },
     prism: {
       theme: prismThemes.github,

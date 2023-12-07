@@ -4,49 +4,6 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #3d55cf;
-  --ifm-color-primary-dark: #0c2871;
-  --ifm-color-primary-darker: #0b266a;
-  --ifm-color-primary-darkest: #091f58;
-  --ifm-color-primary-light: #0e318a;
-  --ifm-color-primary-lighter: #0f3490;
-  --ifm-color-primary-lightest: #113aa3;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #f691c5;
-  --ifm-color-primary-dark: #f36db2;
-  --ifm-color-primary-darker: #f25ba8;
-  --ifm-color-primary-darkest: #ed258c;
-  --ifm-color-primary-light: #f9b5d8;
-  --ifm-color-primary-lighter: #fac7e2;
-  --ifm-color-primary-lightest: #fffdfe;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-.table-of-contents__left-border {
-  border-left: none;
-  border-right: 1px solid var(--ifm-toc-border-color);
-  font-size: 0.75rem;
-  font-weight: bold;  
-  color: black;
-}
-
-.col--2 {
-  --ifm-col-width: calc(3 / 12 * 100%);
-}
-
-.col--8 {
-  --ifm-col-width: calc(9 / 12 * 100%);
-}
-
 /*
 ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
@@ -463,7 +420,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  vertical-align: middle;
+  margin: 30px auto;
   /* 2 */
 }
 
@@ -475,6 +432,7 @@ img,
 video {
   max-width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
@@ -583,6 +541,50 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3d55cf;
+  --ifm-color-primary-dark: #0c2871;
+  --ifm-color-primary-darker: #0b266a;
+  --ifm-color-primary-darkest: #091f58;
+  --ifm-color-primary-light: #0e318a;
+  --ifm-color-primary-lighter: #0f3490;
+  --ifm-color-primary-lightest: #113aa3;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #f691c5;
+  --ifm-color-primary-dark: #f36db2;
+  --ifm-color-primary-darker: #f25ba8;
+  --ifm-color-primary-darkest: #ed258c;
+  --ifm-color-primary-light: #f9b5d8;
+  --ifm-color-primary-lighter: #fac7e2;
+  --ifm-color-primary-lightest: #fffdfe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.table-of-contents__left-border {
+  border-left: none;
+  border-right: 1px solid var(--ifm-toc-border-color);
+  font-size: 0.75rem;
+  font-weight: bold;  
+  color: black;
+}
+
+.col--2 {
+  --ifm-col-width: calc(3 / 12 * 100%);
+}
+
+.col--8 {
+  --ifm-col-width: calc(9 / 12 * 100%);
+}
+
+
 .markdown {
   max-width: 900px;
   margin: 0 auto;
@@ -591,6 +593,9 @@ video {
   line-height: 32px;
 }
 
+.footnotes h2 {
+  display: none;
+}
 figure {
   margin: 0;
   margin-bottom: 16px;
@@ -630,8 +635,8 @@ h4 {
 
 p {
   font-size: 16px;
-  margin-bottom: 10px !important;
-  margin-top: 10px;
+  margin-bottom: 15px !important;
+  margin-top: 15px;
 }
 
 li {
@@ -641,6 +646,10 @@ li {
 .table-of-contents li {
   font-size: 14px;
   font-weight: 550;
+}
+
+.navbar__items img {
+  margin: 0;
 }
 
 .relative {

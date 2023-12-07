@@ -19,7 +19,7 @@ To address these problems, we built Arbiter, an easy-to-deploy and open-source v
 As mentioned previously, engineering teams have several options for integrating video conferencing into their applications: utilizing commercial products, developing a custom DIY solution, or leveraging existing open-source projects. The optimal choice depends on multiple factors, including developer availability, budget limitations, and the team’s expertise in media streaming protocols.
 
 ### Commercial Products
-In the domain of video conferencing integration, there are numerous commercial products available. Among the most prominent of these solutions are Twilio and Agora. These companies offer robust Software Development Kits (SDKs), and take on the responsibility of hosting and managing the conferencing features on their own infrastructure.
+In the domain of video conferencing integration, there are numerous commercial products available. Among the most prominent of these solutions are Twilio and Agora. These companies offer robust Software Development Kits (SDKs), and take on the responsibility of hosting and managing the conferencing features on their own infrastructure.[^1]
 
 Opting for a commercial product allows developers to offload the complex tasks of designing and maintaining scalable infrastructure, and the use of SDKs allows for simple integration of video conferencing. These solutions also typically come equipped with advanced features, such as breakout rooms, waiting rooms, and background effects.
 
@@ -364,5 +364,5 @@ Although Arbiter provides the functionality to address the problem we initially 
 
 Thank you for reading and enjoy using Arbiter!
 
-
-
+## References
+[^1]: example.com

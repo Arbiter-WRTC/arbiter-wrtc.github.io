@@ -28,8 +28,8 @@ export default function HomepageFeatures(): JSX.Element {
       </section>
 
       <section className='bg-gray-100 border-t border-b border-gray-300 border-solid px-4'>
-        <article className='max-w-6xl mx-auto flex flex-row justify-center gap-8 py-20'>
-          <div className='flex flex-col max-w-4xl'>
+        <article className='flex flex-row items-start gap-8 py-20'>
+          <div className='w-1/2'>
             <h2 className='font-medium tracing-tight text-5xl pb-3'>
               Hassle free deployment with our CLI
             </h2>
@@ -39,13 +39,15 @@ export default function HomepageFeatures(): JSX.Element {
               infrastructure needs.
             </p>
           </div>
-          <img className='shadow-img' src='img/arbiter_terminal.png' />
+          <video autoPlay loop muted playsInline className="cli-video">
+            <source className='shadow-img' src="/img/deploy.mp4" type="video/mp4"/>
+          </video>
         </article>
       </section>
 
       <section className='bg-white'>
-        <article className='max-w-6xl mx-auto flex flex-row-reverse justify-center gap-8 py-20'>
-          <div className='flex flex-col max-w-4xl'>
+        <article className='max-w-7xl mx-auto flex flex-row-reverse items-end justify-center gap-8 py-20'>
+          <div className='w-1/2'>
             <h2 className='font-medium tracing-tight text-5xl pb-3'>
               Lorem ipsum dolor sit amet
             </h2>
@@ -55,7 +57,7 @@ export default function HomepageFeatures(): JSX.Element {
               Maecenas maximus consectetur imperdiet.
             </p>
           </div>
-          <img className='shadow-img' src='img/arbiter_code_2.png' />
+          <img className='shadow-img code-img' src='img/arbiter_code.png' />
         </article>
       </section>
 

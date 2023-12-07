@@ -51,8 +51,7 @@ Despite these tradeoffs, leveraging an open-source project might be a viable opt
 
 To bridge the gap between the existing commercial offerings and DIY video conferencing solutions, we have developed Arbiter. Arbiter is a cloud-native framework designed specifically for integrating video conferencing within existing web applications and can be deployed to Amazon Web Services (AWS) with a single command. Arbiter is tailored for development teams that need a straightforward solution to support real-time conferencing for many users across numerous rooms. Arbiter also simplifies self-hosting by abstracting the complexities involved in designing and deploying a scalable cloud infrastructure.
 
-***INSERT COMPARISON CHART***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="80%" src="/img/casestudy/comparison.png" alt="Product Comparisons" />
 
 Arbiter’s unique approach to this problem addresses the major trade-offs between commercial products and fully-featured open-source solutions. Arbiter offers automated cloud deployment that enables development teams to integrate video conferencing into their applications quickly and with minimal complexity. By using Arbiter, teams can avoid the extensive time and effort typically required for developing and deploying video conferencing features, while still retaining the advantages of owning their infrastructure.
 In order to address the gap in existing solutions, we aimed to engineer a product embodying several essential characteristics:
@@ -73,8 +72,7 @@ In order to create an application with real-time audio and video streaming, one 
 - Secure Reliable Transport (SRT)
 - Web Real-Time Communication (WebRTC).
 
-***INSERT SPEED COMPARISON CHART***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="80%" src="/img/casestudy/ProtocolLatency.png" alt="Latency of Protocols" />
 
 In our evaluation, WebRTC emerged as the most suitable protocol for several critical reasons:
 1) Its low latency, which is paramount in video conferencing for near real-time interaction.
@@ -90,8 +88,7 @@ WebRTC is an open-source specification that enables two peers to establish a con
 
 One of the key characteristics of WebRTC is its use of the User Datagram Protocol (UDP) in place of the more traditional Transmission Control Protocol (TCP). UDP is particularly advantageous for video conferencing applications where low latency is imperative because it does not require the establishment of a connection before data transfer and does not implement error correction mechanisms like retransmission of lost packets, which can significantly reduce delays in communication. The preference for UDP, despite the potential for packet loss, underscores the priority of maintaining real-time communication with minimal delay.
 
-***INSERT WRTC CONNECTION DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="80%" src="/img/casestudy/WebRTCConnection.png" alt="WebRTC" />
 
 ### How WebRTC Works
 With WebRTC, establishing audio and video communication between computers involves a nuanced, multi-step handshake process called negotiation that is reliant on the specialized protocols ICE and SDP. The negotiation process is only possible after the peers have a clear understanding of how to connect with each other.
@@ -124,8 +121,7 @@ The need for NAT devices stemmed from the limitations of the IPv4 protocol, whic
 
 For example, a standard router is assigned an IP address by the owner's Internet Service Provider, which it utilizes for interactions with other computers over the internet. The router allocates internal, generic addresses to the computers within its network and maintains a record of these addresses in a table. This enables the router to accurately direct incoming and outgoing internet traffic to the appropriate devices. Through the use of Network Address Translation (NAT), this mechanism facilitates multiple computers sharing a single external IP address.
 
-***INSERT NAT DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/NAT.png" alt="NAT" />
 
 However, NAT presents two major challenges in establishing a WebRTC connection. First, computers behind a NAT device are unaware of their public IP address and port used by the NAT device, which are necessary for negotiating WebRTC connections. Secondly, certain NAT configurations, like Symmetric NAT, restrict direct WebRTC peer connections due to their security settings.
 
@@ -134,13 +130,11 @@ However, NAT presents two major challenges in establishing a WebRTC connection. 
 
 Addressing the first challenge, the STUN protocol, or Session Traversal Utilities for NAT (RFC 5389), enables a device behind a NAT to discover its public IP and port. The process involves sending a request to a STUN server, which then informs the device of its public IP address so that it can offer this information to other computers that want to connect with it directly.
 
-***INSERT STUN DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/STUN.png" alt="STUN" />
 
 However, there are NAT configurations like Symmetric NAT where even STUN encounters limitations. In a Symmetric NAT setup, the NAT device assigns a distinct IP address and port combination for each outgoing traffic session. Consequently, when a STUN server responds to a computer seeking to establish a WebRTC connection, it provides an IP address and port combination that is specific to the communication with that STUN server alone. If another computer - in this case the WebRTC peer - attempts to use that address to connect, it will fail because it did not provide that specific IP-port combination that was uniquely assigned to the original STUN communication.
 
-***INSERT SYM NAT DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/SymmetricNAT.png" alt="Symmetric NAT" />
 
 As an analogy, this situation is akin to a customer being advised to enter a store through the shipping dock when inquiring about access. While technically a point of entry, the shipping dock isn’t the appropriate or intended access point for a customer.
 
@@ -150,8 +144,7 @@ Just like a customer being turned away from a shipping dock, a WebRTC peer tryin
 
 When a client has a restrictive security configuration - like with a Symmetric NAT - the Traversal Using Relays around NAT (TURN) protocol (RFC 5766) can be used by a server to relay that peer’s media streams. In essence, a TURN server acts as a peer to which a client can connect, and the TURN server establishes another connection with the peer originally intended. Notably, this requires a TURN server to use a lot of bandwidth and computational resources because it may need to forward the media streams of many clients.
 
-***INSERT TURN DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/STUN_TURN.png" alt="TURN Relay" />
 
 ### Establishing a Connection
 
@@ -170,8 +163,7 @@ First, in the creation or acceptance of an offer, a client must define its Sessi
 
 Second, ICE candidates represent potential ways through which clients can connect to one another directly. The information returned by STUN/TURN is used by the client to generate ICE candidates that can be potential public IP addresses, or relay servers via which an indirect connection can be established.
 
-***INSERT SDP/ICE DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/SDPIceExchange.png" alt="Video Conferencing" />
 
 A signaling server is vital to this process because it serves as the conduit through which ICE candidates, SDPs, and other essential pieces of information are exchanged between clients.
 
@@ -248,8 +240,7 @@ The necessity of SFU negotiation of many producer and consumer connections can p
 
 However, using a central server for negotiation creates an additional layer of negotiation complexity. The order in which peers send and receive streams to and from the SFU is determined by other users in the call, which can lead to extremely complex handshake logic.  In order to avoid these complexities, we devised a predictable pattern of negotiation that we call *Asymmetric Negotiation*, in which the party making an offer to connect changes depending on what type of connection needs to be established. For producer connections, the client invariably initiates the connection with the SFU. Conversely, the SFU initiates the connection for new consumer connections because it is the first entity aware of the need for a new connection. This simplified logic achieves a predictable negotiation pattern for establishing WebRTC connections when new peers join.
 
-***INSERT asymmetric DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/AsymmetricNegotiation.png" alt="Asymmetric Negotiation" />
 
 ### Prototype Shortcomings
 

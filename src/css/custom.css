@@ -584,7 +584,16 @@ video {
   --ifm-col-width: calc(9 / 12 * 100%);
 }
 
+.cli-video {
+  width: 500px;
+  position: absolute;
+  right: 50px;
+  top: 950px;
+}
 
+.code-img {
+  margin-left: 50px;
+}
 .markdown {
   max-width: 900px;
   margin: 0 auto;
@@ -596,6 +605,7 @@ video {
 .footnotes h2 {
   display: none;
 }
+
 figure {
   margin: 0;
   margin-bottom: 16px;

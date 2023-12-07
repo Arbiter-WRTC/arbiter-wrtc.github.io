@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #143a9b;
+  --ifm-color-primary: #3d55cf;
   --ifm-color-primary-dark: #0c2871;
   --ifm-color-primary-darker: #0b266a;
   --ifm-color-primary-darkest: #091f58;
@@ -141,7 +141,7 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -149,7 +149,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
+} */
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
@@ -386,13 +386,13 @@ legend {
   padding: 0;
 }
 
-ol,
+/* ol,
 ul,
 menu {
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
 
 /*
 Reset default styling for dialogs.
@@ -581,6 +581,66 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.markdown {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: inter;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+figure {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-top: 16px;
+  font-size: 44px;
+  margin-bottom: 12px !important;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 36px;
+  margin-bottom: 10px !important;
+  margin-top: 16px;
+
+}
+
+h3 {
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px !important;
+  margin-top: 16px;
+  line-height: 2.2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 8px !important;
+  font-weight: 600;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 10px !important;
+  margin-top: 10px;
+}
+
+li {
+  font-size: 20px;
+}
+
+.table-of-contents li {
+  font-size: 18px;
+  font-weight: 550;
 }
 
 .relative {

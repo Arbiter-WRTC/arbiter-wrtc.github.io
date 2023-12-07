@@ -70,7 +70,7 @@ const config: Config = {
       },
       items: [
         {to: '/case-study', label: 'Case-Study', position: 'right'},
-        //{to: '/docs', label: 'Docs', position: 'right'},
+        {type: 'doc', docId: "docs", label: 'Docs', position: 'right'},
         {to: '/#team', label: 'Team', position: 'right'},
         {to: 'https://github.com/Arbiter-WRTC/', label: 'GitHub', position: 'right'},
       ],

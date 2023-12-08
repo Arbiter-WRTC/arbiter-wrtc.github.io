@@ -88,7 +88,7 @@ WebRTC is an open-source specification that enables two peers to establish a con
 
 One of the key characteristics of WebRTC is its use of the User Datagram Protocol (UDP) in place of the more traditional Transmission Control Protocol (TCP). UDP is particularly advantageous for video conferencing applications where low latency is imperative because it does not require the establishment of a connection before data transfer and does not implement error correction mechanisms like retransmission of lost packets, which can significantly reduce delays in communication. The preference for UDP, despite the potential for packet loss, underscores the priority of maintaining real-time communication with minimal delay.
 
-<img width="80%" src="/img/casestudy/WebRTCConnection.png" alt="WebRTC" />
+<img width="60%" src="/img/casestudy/WebRTCConnection.png" alt="WebRTC" />
 
 ### How WebRTC Works
 With WebRTC, establishing audio and video communication between computers involves a nuanced, multi-step handshake process called negotiation that is reliant on the specialized protocols ICE and SDP. The negotiation process is only possible after the peers have a clear understanding of how to connect with each other.
@@ -182,9 +182,9 @@ While a mesh topology offers some advantages like a simplified infrastructure an
 #### Client-Server
 To address this shortcoming, we considered the use of a client-server topology in order to reduce the resource demand on individual clients. With less demand on clients, Arbiter would be able to sustain a larger number of clients simultaneously, which better fulfills Arbiter’s main goals.
 
-Practically, there are two main WebRTC client-server topologies: using a Media Control Unit (MCU) or a Selective Forwarding Unit (SFU). These specific topologies appear similar, but are distinguished by the nature of the connection between client and server. Both the MCU and SFU topologies present distinct trade-offs in the context of WebRTC-based communication.
+Practically, there are two main WebRTC client-server topologies: using a Multipoint Control Unit (MCU) or a Selective Forwarding Unit (SFU). These specific topologies appear similar, but are distinguished by the nature of the connection between client and server. Both the MCU and SFU topologies present distinct trade-offs in the context of WebRTC-based communication.
 
-In an MCU topology, the Media Control Unit acts as a central server. It amalgamates all incoming client streams into a singular stream and then redistributes this combined stream to each client. The key advantage of this approach is that each client is required to maintain only one WebRTC connection with the MCU server. While this significantly reduces the bandwidth and processing load on each client, this centralization means that the MCU server itself must shoulder a heavy computational load to process all incoming user data.
+In an MCU topology, the Multipoint Control Unit acts as a central server. It amalgamates all incoming client streams into a singular stream and then redistributes this combined stream to each client. The key advantage of this approach is that each client is required to maintain only one WebRTC connection with the MCU server. While this significantly reduces the bandwidth and processing load on each client, this centralization means that the MCU server itself must shoulder a heavy computational load to process all incoming user data.
 
 <img width="60%" src="/img/casestudy/ArbiterMCU_Card.png" alt="MCU" />
 

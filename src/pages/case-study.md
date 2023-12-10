@@ -19,7 +19,7 @@ To address these problems, we built Arbiter, an easy-to-deploy and open-source v
 As mentioned previously, engineering teams have several options for integrating video conferencing into their applications: utilizing commercial products, developing a custom DIY solution, or leveraging existing open-source projects. The optimal choice depends on multiple factors, including developer availability, budget limitations, and the team’s expertise in media streaming protocols.
 
 ### Commercial Products
-In the domain of video conferencing integration, there are numerous commercial products available. Among the most prominent of these solutions are Twilio and Agora. These companies offer robust Software Development Kits (SDKs), and take on the responsibility of hosting and managing the conferencing features on their own infrastructure.[^1][^2]
+In the domain of video conferencing integration, there are numerous commercial products available. Among the most prominent of these solutions are Twilio and Agora. These companies offer robust Software Development Kits (SDKs), and take on the responsibility of hosting and managing the conferencing features on their own infrastructure.
 
 Opting for a commercial product allows developers to offload the complex tasks of designing and maintaining scalable infrastructure, and the use of SDKs allows for simple integration of video conferencing. These solutions also typically come equipped with advanced features, such as breakout rooms, waiting rooms, and background effects.
 
@@ -65,7 +65,7 @@ In subsequent sections, we will delve into the methodologies employed to realize
 ## Fundamental Considerations Building Arbiter
 
 ### Choosing a Media Streaming Protocol
-In order to create an application with real-time audio and video streaming, one of our primary considerations was the selection of an appropriate media streaming protocol. The landscape of media streaming protocols is diverse, each presenting its own set of trade-offs in terms of device and browser support, ease of integration, compatibility, speed, and security, among other factors. Some of the commonly used protocols in streaming media include:
+In order to create an application with real-time audio and video streaming, one of our primary considerations was the selection of an appropriate media streaming protocol. The landscape of media streaming protocols is diverse, each presenting its own set of trade-offs in terms of device and browser support, ease of integration, compatibility, speed, and security, among other factors. Some of the commonly used protocols in streaming media include[^1]:
 - HTTP Live Streaming (HLS)
 - Dynamic Adaptive Streaming over HTTP (DASH)
 - Real-Time Messaging Protocol (RTMP)
@@ -84,14 +84,14 @@ While WebRTC has significant advantages, it is a relatively new protocol that ha
 Despite these limitations, we decided to utilize WebRTC for Arbiter's development, primarily due to its alignment with our objectives of seamless integration and real-time video conferencing. It is crucial to acknowledge, however, that WebRTC, despite its numerous advantages, is a sophisticated browser specification and suite of protocols. Implementing it successfully requires a deep understanding of its intricacies.
 
 ### What is WebRTC?
-WebRTC is an open-source specification that enables two peers to establish a connection in order to facilitate real-time communication. This specification details the protocols and methods necessary for sending and receiving media, like ICE (Interactive Connectivity Establishment) and SDP (Session Description Protocol), which are fundamental in establishing and maintaining connections.
+WebRTC is an open-source specification that enables two peers to establish a connection in order to facilitate real-time communication[^2]. This specification details the protocols and methods necessary for sending and receiving media, like ICE (Interactive Connectivity Establishment) and SDP (Session Description Protocol), which are fundamental in establishing and maintaining connections.
 
 One of the key characteristics of WebRTC is its use of the User Datagram Protocol (UDP) in place of the more traditional Transmission Control Protocol (TCP). UDP is particularly advantageous for video conferencing applications where low latency is imperative because it does not require the establishment of a connection before data transfer and does not implement error correction mechanisms like retransmission of lost packets, which can significantly reduce delays in communication. The preference for UDP, despite the potential for packet loss, underscores the priority of maintaining real-time communication with minimal delay.
 
 <img width="60%" src="/img/casestudy/WebRTCConnection.png" alt="WebRTC" />
 
 ### How WebRTC Works
-With WebRTC, establishing audio and video communication between computers involves a nuanced, multi-step handshake process called negotiation that is reliant on the specialized protocols ICE and SDP. The negotiation process is only possible after the peers have a clear understanding of how to connect with each other.
+With WebRTC, establishing audio and video communication between computers involves a nuanced, multi-step handshake process called negotiation that is reliant on the specialized protocols ICE and SDP. The negotiation process is only possible after the peers have a clear understanding of how to connect with each other[^3].
 
 In order to understand the nuances involved in setting up a WebRTC connection, let's consider a real-world scenario. Imagine Merry is in urgent need of bread and seeks to coordinate with Sam to obtain some. However, Merry lacks information about  Sam's whereabouts and the appropriate time for a meeting. Consequently, Merry turns to an intermediary, Pippin, who possesses the requisite knowledge to locate Sam and communicate Merry's availability for a rendezvous. This enables them to effectively plan the discussion about exchanging bread.
 
@@ -128,7 +128,7 @@ However, NAT presents two major challenges in establishing a WebRTC connection. 
 
 #### What is STUN?
 
-Addressing the first challenge, the STUN protocol, or Session Traversal Utilities for NAT (RFC 5389), enables a device behind a NAT to discover its public IP and port. The process involves sending a request to a STUN server, which then informs the device of its public IP address so that it can offer this information to other computers that want to connect with it directly.
+Addressing the first challenge, the STUN protocol, or Session Traversal Utilities for NAT (RFC 8489) [^4], enables a device behind a NAT to discover its public IP and port. The process involves sending a request to a STUN server, which then informs the device of its public IP address so that it can offer this information to other computers that want to connect with it directly.
 
 <img width="60%" src="/img/casestudy/STUN.png" alt="STUN" />
 
@@ -142,7 +142,7 @@ Just like a customer being turned away from a shipping dock, a WebRTC peer tryin
 
 #### What is TURN?
 
-When a client has a restrictive security configuration - like with a Symmetric NAT - the Traversal Using Relays around NAT (TURN) protocol (RFC 5766) can be used by a server to relay that peer’s media streams. In essence, a TURN server acts as a peer to which a client can connect, and the TURN server establishes another connection with the peer originally intended. Notably, this requires a TURN server to use a lot of bandwidth and computational resources because it may need to forward the media streams of many clients.
+When a client has a restrictive security configuration - like with a Symmetric NAT - the Traversal Using Relays around NAT (TURN) protocol (RFC 8656 [^5]) can be used by a server to relay that peer’s media streams. In essence, a TURN server acts as a peer to which a client can connect, and the TURN server establishes another connection with the peer originally intended. Notably, this requires a TURN server to use a lot of bandwidth and computational resources because it may need to forward the media streams of many clients.
 
 <img width="60%" src="/img/casestudy/STUN_TURN.png" alt="TURN Relay" />
 
@@ -357,5 +357,8 @@ Thank you for reading and enjoy using Arbiter!
 
 ## References
 
-[^1]: adasda example.com
-[^2]: asdasdd otherexample.com
+[^1]: Video Streaming Protocols: What Are They & How to Choose The Best One https://getstream.io/blog/streaming-protocols/
+[^2]: WebRTC.org https://webrtc.org/
+[^3]: High Performance Browser Networking https://hpbn.co/webrtc/#establishing-a-peer-to-peer-connection
+[^4] Internet Engineering Task Force (IETF) Request for Comments: 8489 https://www.rfc-editor.org/rfc/rfc8489.html
+[^5] Internet Engineering Task Force (IETF) Request for Comments: 8656 https://www.rfc-editor.org/rfc/rfc8656.html

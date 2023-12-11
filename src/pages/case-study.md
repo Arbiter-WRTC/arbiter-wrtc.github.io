@@ -357,8 +357,8 @@ Thank you for reading and enjoy using Arbiter!
 
 ## References
 
-[^1]: Video Streaming Protocols: What Are They & How to Choose The Best One https://getstream.io/blog/streaming-protocols/
-[^2]: WebRTC.org https://webrtc.org/
-[^3]: High Performance Browser Networking https://hpbn.co/webrtc/#establishing-a-peer-to-peer-connection
-[^4] Internet Engineering Task Force (IETF) Request for Comments: 8489 https://www.rfc-editor.org/rfc/rfc8489.html
-[^5] Internet Engineering Task Force (IETF) Request for Comments: 8656 https://www.rfc-editor.org/rfc/rfc8656.html
+[^1]: [Video Streaming Protocols What Are They & How to Choose The Best One](https://getstream.io/blog/streaming-protocols/)
+[^2]: [WebRTC.org](https://webrtc.org/)
+[^3]: [High Performance Browser Networking](https://hpbn.co/webrtc/#establishing-a-peer-to-peer-connection)
+[^4]: [Internet Engineering Task Force (IETF) Request for Comments: 8489](https://www.rfc-editor.org/rfc/rfc8489.html)
+[^5]: [Internet Engineering Task Force (IETF) Request for Comments: 8656](https://www.rfc-editor.org/rfc/rfc8656.html)

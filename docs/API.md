@@ -146,7 +146,7 @@ Creates a new unclaimed room and creates record in the database.
 }
 ```
 
-### WebSocket Gateway
+## WebSocket Gateway
 The WebSocket gateway is the Arbiter signaling server. Arbiter clients (videoconference participants) and SFU instances connect to it to negotiate WebRTC connections and to manage call state (i.e. particpants entering and exiting a call).
 
 

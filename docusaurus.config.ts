@@ -70,9 +70,9 @@ const config: Config = {
       },
       items: [
         {to: '/case-study', label: 'Case-Study', position: 'right'},
-        {to: 'https://www.youtube.com/watch?v=ruM417pIyl8', label: 'Tech Talk', position: 'right'},
+        {to: 'https://www.youtube.com/watch?v=3BMGsQI5XOI', label: 'Tech Talk', position: 'right'},
         {type: 'doc', docId: "API", label: 'Docs', position: 'right'},
-        {to: '/#team', label: 'Team', position: 'right'},
+        {to: '/#team', label: 'Team', position: 'right', activeBasePath: 'never-active'},
         {to: 'https://github.com/Arbiter-WRTC/', label: 'GitHub', position: 'right'},
       ],
     },
@@ -103,7 +103,7 @@ const config: Config = {
             },
             {
               label: "Tech Talk",
-              href: "https://www.youtube.com/watch?v=ruM417pIyl8",
+              href: "https://www.youtube.com/watch?v=3BMGsQI5XOI",
             },
           ],
         },

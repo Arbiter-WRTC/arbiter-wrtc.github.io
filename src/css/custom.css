@@ -411,7 +411,6 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 
 img,
-svg,
 video,
 canvas,
 audio,
@@ -544,6 +543,7 @@ video {
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: "inter", sans-serif;
   --ifm-color-primary: #3d55cf;
   --ifm-color-primary-dark: #0c2871;
   --ifm-color-primary-darker: #0b266a;
@@ -1037,6 +1037,12 @@ li {
   letter-spacing: 0.025em;
 }
 
+.text-blue-300 {
+  --tw-text-opacity: 1;
+  color: rgb(39 208 233 / var(--tw-text-opacity));
+}
+
+
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -1056,6 +1062,7 @@ li {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
 
 .text-white {
   --tw-text-opacity: 1;
@@ -1160,4 +1167,20 @@ li {
   .md\:leading-tight {
     line-height: 1.25;
   }
+}
+
+html[data-theme='light'] footer{
+  background-color: white;
+}
+
+html[data-theme='light'] footer *{
+  color: black;
+}
+
+html[data-theme='dark'] footer {
+  background-color: rgb(36, 37, 38);
+}
+
+.svg {
+  display: block;
 }

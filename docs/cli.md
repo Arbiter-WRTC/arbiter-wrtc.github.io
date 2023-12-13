@@ -12,8 +12,6 @@ Subsequently, a user must ensure that the _AWS Command Line Interface_ is config
 
 For more details on deriving the above credentials, please see the [**official docs**](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html).
 
-
-## Arbiter Command Line Interface
 ### Install
 Install the Arbiter CLI with npm
 ```sh-session

@@ -8,17 +8,17 @@ export default function HomepageFeatures(): JSX.Element {
           </h2>
           <div className='flex flex-row justify-center gap-20'>
             <div className='flex flex-col'>
-              <p className='font-medium tracking-tight text-5xl'>One Command</p>
+              <p className='font-medium tracking-tight text-5xl text-gray-600'>One Command</p>
               <p className='text-xl text-gray-600'>AWS Integration</p>
             </div>
             <div className='flex flex-col'>
-              <p className='font-medium tracking-tight text-5xl'>
+              <p className='font-medium tracking-tight text-5xl text-gray-600'>
                 Auto-Scaling
               </p>
               <p className='text-xl text-gray-600'>Multi-Room Capability</p>
             </div>
             <div className='flex flex-col'>
-              <p className='font-medium tracking-tight text-5xl'>
+              <p className='font-medium tracking-tight text-5xl text-gray-600'>
                 Effortless UI
               </p>
               <p className='text-xl text-gray-600'>Drop-in React Component</p>
@@ -30,7 +30,7 @@ export default function HomepageFeatures(): JSX.Element {
       <section className='bg-gray-100 border-t border-b border-gray-300 border-solid px-4'>
         <article className='flex flex-row items-start gap-8 py-20'>
           <div className='w-1/2'>
-            <h2 className='font-medium tracing-tight text-5xl pb-3'>
+            <h2 className='font-medium tracing-tight text-5xl pb-3 text-gray-600'>
               Hassle free deployment with our CLI
             </h2>
             <p className='font-epilogue text-xl text-gray-700'>
@@ -48,7 +48,7 @@ export default function HomepageFeatures(): JSX.Element {
       <section className='bg-white'>
         <article className='max-w-7xl mx-auto flex flex-row-reverse items-end justify-center gap-8 py-20'>
           <div className='w-1/2'>
-            <h2 className='font-medium tracing-tight text-5xl pb-3'>
+            <h2 className='font-medium tracing-tight text-5xl pb-3 text-gray-600'>
               Lorem ipsum dolor sit amet
             </h2>
             <p className='font-epilogue text-xl text-gray-700'>
@@ -64,7 +64,7 @@ export default function HomepageFeatures(): JSX.Element {
       <section className='bg-gray-100 border-t border-b border-gray-300 border-solid px-4'>
         <article className='max-w-6xl mx-auto flex flex-col justify-center gap-8 py-20'>
           <div className='flex flex-col max-w-4xl text-center mx-auto'>
-            <h2 className='font-medium tracing-tight text-5xl pb-3'>
+            <h2 className='font-medium tracing-tight text-5xl pb-3 text-gray-600'>
               Powered by AWS
             </h2>
             <p className='font-epilogue text-xl text-gray-700'>

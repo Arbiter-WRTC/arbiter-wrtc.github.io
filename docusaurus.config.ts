@@ -91,6 +91,10 @@ const config: Config = {
               label: "Case Study",
               href: "/case-study",
             },
+            {
+              label: "Docs",
+              href: "/docs/API"
+            }
             // stas
           ],
         },

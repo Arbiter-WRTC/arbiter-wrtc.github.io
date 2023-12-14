@@ -1,7 +1,7 @@
 ## Arbiter React SDK
 ### Install
 
-Arbiter's React SDK is built using React with Vite and Typescript.<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>
+Arbiter's React SDK is built using React with Vite and Typescript.
 
 To use the Arbiter React SDK, the Arbiter infrastructure must first be provisioned using the CLI . Once deployed, Arbiter's CLI will provide you with a .env.local file to use with the Arbiter React SDK.
 

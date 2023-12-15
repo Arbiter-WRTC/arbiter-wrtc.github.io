@@ -51,7 +51,7 @@ export default function HomepageFeatures(): JSX.Element {
                 back, grab a cup of coffee, and we'll take care of all of your
                 infrastructure needs.
               </p>
-              <h2 className="md:hidden font-medium tracing-tight text-5xl pb-3 text-gray-600 text-center">
+              <h2 className="lp-h2 md:hidden font-medium tracing-tight text-5xl pb-3 text-gray-600 text-center">
                 Easy CLI
               </h2>
               <p className="lp-para  md:hidden font-epilogue text-xl text-gray-700 text-center">
@@ -87,7 +87,7 @@ export default function HomepageFeatures(): JSX.Element {
                 video conferencing into your React application. You'll be up and
                 running in no time.
               </p>
-              <h2 className="md:hidden font-medium tracing-tight text-5xl pb-3 text-gray-600 text-center">
+              <h2 className="lp-h2 md:hidden font-medium tracing-tight text-5xl pb-3 text-gray-600 text-center">
                 Quick <br></br>Integration
               </h2>
               <p className="lp-para  md:hidden font-epilogue text-xl text-gray-700 text-center">

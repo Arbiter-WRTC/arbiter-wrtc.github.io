@@ -23,8 +23,7 @@ In the domain of video conferencing integration, there are numerous commercial p
 
 Opting for a commercial product allows developers to offload the complex tasks of designing and maintaining scalable infrastructure, and the use of SDKs allows for simple integration of video conferencing. These solutions also typically come equipped with advanced features, such as breakout rooms, waiting rooms, and background effects[^6].
 
-***INSERT COMMERCIAL SOLUTIONS***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="40%" src="/img/casestudy/commercial.png" alt="Video Conferencing" />
 
 Commercial solutions can be particularly advantageous for well-funded development teams that prefer not to manage their own infrastructure or concern themselves with hosting logistics. However, this route does come with its own set of challenges, most notably cost, lack of control over infrastructure, and vendor lock-in.
 
@@ -32,8 +31,7 @@ Commercial solutions can be particularly advantageous for well-funded developmen
 
 Alternatively, a development team might consider building their own video conferencing solution using basic open-source libraries. Among the notable open-source projects in this space are mediasoup[^7], and Kurento[^8]. These projects offer low-level implementations of web conferencing protocols. However, it’s important to note that these open-source libraries do not provide hosting solutions or server logic. This means that the onus of designing and deploying both application logic as well as a scalable cloud architecture falls squarely on the development team. As a result, integrating video conferencing in this manner could lead to a slower time to market and a significantly greater development effort when compared to other options.
 
-***INSERT DIY DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="40%" src="/img/casestudy/diy.png" alt="Video Conferencing" />
 
 ### In-Betweens
 As an alternative to commercial products or DIY, there exists a middle ground approach. This middle ground option encompasses a variety of open-source frameworks, which can provide a means to integrate video conferencing capabilities into an application. These projects offer out-of-the-box video conferencing capabilities and Software Development Kits (SDKs), but stop short of providing hosting or specific self-hosting guidelines.
@@ -42,8 +40,7 @@ Unlike purchasing a commercial product, opting for an open-source project can be
 
 Among the open-source solutions available, LiveKit[^9] and Jitsi Meet[^10] stand out due to their robustness. These solutions are similar to commercial offerings in terms of advanced features and the customizability of their APIs and SDKs. However, deploying and maintaining these projects is a more involved process due to the absence of managed infrastructure.
 
-***INSERT PICTURE OF TONS OF OPEN-SOURCE PROJECTS***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="20%" src="/img/casestudy/inbetweens.png" alt="Video Conferencing" />
 
 Despite these tradeoffs, leveraging an open-source project might be a viable option for teams that possess the necessary expertise and time to design and manage their own infrastructure. This route offers advanced capabilities and control, without the recurring costs inherent to commercial products.
 
@@ -95,8 +92,7 @@ With WebRTC, establishing audio and video communication between computers involv
 
 In order to understand the nuances involved in setting up a WebRTC connection, let's consider a real-world scenario. Imagine Merry is in urgent need of bread and seeks to coordinate with Sam to obtain some. However, Merry lacks information about  Sam's whereabouts and the appropriate time for a meeting. Consequently, Merry turns to an intermediary, Pippin, who possesses the requisite knowledge to locate Sam and communicate Merry's availability for a rendezvous. This enables them to effectively plan the discussion about exchanging bread.
 
-***INSERT BREAD DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="75%" src="/img/casestudy/bread_diagram.png" alt="Video Conferencing" />
 
 Pippin's role in the above scenario symbolizes a pivotal step in the formulation of a WebRTC connection, termed 'signaling'. This phase involves peers determining their strategy for connection, thereby establishing the groundwork for subsequent communication. Notably, it is imperative that this signaling phase is concluded successfully for WebRTC connection to be established.
 
@@ -117,13 +113,11 @@ While the advantages of using WebRTC are clear, there are a few roadblocks that 
 
 #### What is NAT and why is it a network obstacle?
 
-The need for NAT devices stemmed from the limitations of the IPv4 protocol, which allows for approximately 4.3 billion unique IP addresses. As it became apparent in the early 1990s that this number would be insufficient, NAT devices were introduced. NAT devices map multiple private IP addresses to a single public address, effectively solving the issue of address depletion[^18].
-
-For example, a standard router is assigned an IP address by the owner's Internet Service Provider, which it utilizes for interactions with other computers over the internet. The router allocates internal, generic addresses to the computers within its network and maintains a record of these addresses in a table. This enables the router to accurately direct incoming and outgoing internet traffic to the appropriate devices. Through the use of Network Address Translation (NAT), this mechanism facilitates multiple computers sharing a single external IP address.
-
-<img width="60%" src="/img/casestudy/NAT.png" alt="NAT" />
-
-However, NAT presents two major challenges in establishing a WebRTC connection. First, computers behind a NAT device are unaware of their public IP address and port used by the NAT device, which are necessary for negotiating WebRTC connections. Secondly, certain NAT configurations, like Symmetric NAT, restrict direct WebRTC peer connections due to their security settings.
+The need for NAT devices stemmed from the limitations of the IPv4 p90
+90
+90
+90
+90RTC connection. First, computers behind a NAT device are unaware of their public IP address and port used by the NAT device, which are necessary for negotiating WebRTC connections. Secondly, certain NAT configurations, like Symmetric NAT, restrict direct WebRTC peer connections due to their security settings.
 
 
 #### What is STUN?
@@ -205,8 +199,7 @@ After determining that a Selective Forwarding Unit (SFU) topology most closely a
 
 The most significant challenge in the development of Arbiter was the scarcity of detailed resources on constructing an SFU. Extensive research through commercial offerings, open-source projects, articles, and WebRTC literature revealed the implementation of an SFU as largely opaque.
 
-***INSERT WHAT SFU? DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/howToSFU.png" alt="Video Conferencing" />
 
 The absence of detailed literature or existing models left a gap in our understanding of the technical implementation of stream forwarding. Consequently, our approach involved the development of basic prototypes, aiming to resolve these challenges based predominantly on our understanding of the WebRTC specification.
 
@@ -261,29 +254,25 @@ Building upon the insights garnered from our prototype, we undertook a comprehen
 4) The HTTP API Gateway
 5) React Software Development Kit (SDK)
 
-***INSERT ARCHITECTURE OVERVIEW***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="90%" src="/img/casestudy/architecture_overview.png" alt="Video Conferencing" />
 
 In the following section, we will examine each piece of Arbiter’s architecture in detail. This analysis aims to explain the specific purpose and function of each element, and to demonstrate how they collectively address the challenges encountered in earlier iterations of the project.
 
 ### SFU
 
-***INSERT SFU DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="98%" src="/img/casestudy/SFU_Cluster.png" alt="Video Conferencing" />
 
 To resolve the scaling challenge associated with increasing the number of user-accessible rooms, we opted to containerize the SFU instances and deploy them via AWS Elastic Container Service (ECS) on AWS Fargate. Containerization, which facilitates the running of applications within an emulated application layer of an operating system, presented several critical benefits for our specific use case. First, the process of creating and decommissioning containers is quick and inexpensive, particularly when contrasted with the deployment and configuration of a complete EC2 instance for a single application. Second, a single ECS cluster is capable of managing up to 5,000 containers, thereby enabling the accommodation of numerous rooms without additional configuration. Third, Fargate manages both the underlying hardware and system on which the containers operate, including the management of the containers themselves. This approach inherently automates hardware and software monitoring, significantly reducing the workload for developers utilizing Arbiter.
 
 ### STUN/TURN
 
-***INSERT STUN/TURN DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="98%" src="/img/casestudy/CoTURN_Cluster.png" alt="Video Conferencing" />
 
 Addressing the scalability of STUN/TURN servers was a critical challenge, driven by the potential for user overload on a single server and the necessity for TURN to relay media streams. Consequently, we opted for a strategy akin to our approach for scaling the SFU, utilizing ECS on Fargate. However, the communication dynamics with STUN/TURN servers differs significantly from those of the SFU, necessitating a different architectural approach. Contrary to the SFU that coordinates its communication with peers through the signaling stack, STUN/TURN servers directly interface with clients through the browser. This requires that all clients have access to the public IP address of a STUN/TURN server to facilitate WebRTC-based connections. We accomplished this through the implementation of a Network Load Balancer, which efficiently routes requests to STUN/TURN instances in the ECS cluster. 
 
 While building the STUN/TURN stack, a significant, unexpected challenge in scaling the stack was maintaining consistency in client-server communication. Specifically, when a client utilizes a STUN/TURN server for tasks like discovering their public IP address or stream forwarding, it’s imperative to maintain continuous communication with the same server instance. This necessity arises from the iterative process of discovering ICE candidates and the potential need to revert to a relay, which is essentially a continuous dialogue with the server.
 
-***INSERT STICKY SESS DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="80%" src="/img/casestudy/sticky_sess.png" alt="Video Conferencing" />
 
 To draw an analogy, consider the process akin to negotiating a car’s price. If, mid-negotiation, the original salesperson were to leave, forcing you to restart negotiations with a new, uninformed salesperson, the process would become inefficient, repetitive, and unlikely to reach a conclusion.
 
@@ -293,15 +282,13 @@ To address this, we implemented sticky sessions in our load balancer, establishi
 
 ### Signaling WebSocket Gateway
 
-***INSERT WSG DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="98%" src="/img/casestudy/Signaling_Stack.png" alt="Video Conferencing" />
 
 Although containerization of our existing signaling server was a viable option, it failed to resolve the critical issues of unnecessary costs and excessive uptime identified during our prototyping phase. The fundamental requirements for the signaling component were its operation through WebSockets and its perpetual availability. AWS’s WebSocket Gateway met these criteria; however, integrating it necessitated substantial refactoring of our existing application code. Importantly, this approach diverged from our previous solution, where our Express server managed the state of our application. Given the stateless nature of AWS WebSocket Gateways, it became imperative to utilize a database for storing room and session information.
 
 To address this, we implemented AWS Lambda functions in conjunction with DynamoDB, handling signaling processes akin to those managed by our original Express server. Similar to the WebSocket Gateway, Lambda functions are stateless and require a persistent data source to accurately route messages. These functions are also scalable, dynamically adjusting to the volume of incoming requests, thus effectively addressing the scalability concerns of our signaling architecture. Despite initial apprehensions regarding potential latency issues and their impact on client application responsiveness, our practical usage and testing did not substantiate these concerns.
 
-***INSERT LAMBDAS DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="60%" src="/img/casestudy/negotiation_lambdas.png" alt="Video Conferencing" />
 
 Arbiter’s WebSocket Gateway facilitates signaling through two distinct signals: identify and handshake. The ‘identify’ signal determines the nature of the connection (be it SFU or client) and updates the database for stateful connection management. The ‘handshake’ signal enables the exchange of various WebRTC-related signals between an SFU and a client, crucial for:
 - Establishing a WebRTC connection
@@ -311,8 +298,7 @@ Arbiter’s WebSocket Gateway facilitates signaling through two distinct signals
 
 ### HTTP API Gateway
 
-***INSERT API GATEWAY DIAGRAM***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="98%" src="/img/casestudy/API_Stack.png" alt="Video Conferencing" />
 
 In the initial design of our prototype, the responsibility for creating and assigning rooms was delegated to the signaling server. However, the required refactoring of the signaling server necessitated the introduction of a new component to manage user authentication and room allocation. Similarly to a WebSocket Gateway, an AWS HTTP API Gateway functions as a stateless mechanism, facilitating on-demand communication via Lambda functions. The primary operations of the HTTP API Gateway, specifically the assignment and creation of rooms, occur less frequently compared to those of the WebSocket gateway, making it an ideal candidate for a stateless API Gateway. The fundamental responsibilities of the HTTP API Gateway include:
 - Verifying the existence of a room associated with a specific URL
@@ -325,15 +311,13 @@ The HTTP API Gateway executes these tasks through three lambda functions, which 
 ### React SDK
 In our final development phase, we transitioned from hosting a standalone React application to establishing a React-component SDK. The SDK’s modular design is tailored to meet Arbiter’s primary use case: seamless integration into existing applications. Given Arbiter’s stateless architecture, the only requirements for the client application are a page’s URL route in combination with the addresses of the signaling stack, the HTTP API, and the STUN/TURN stack. Integrating these URL endpoints into a React application, users can effortlessly integrate the full suite of Arbiter’s functionalities into their applications with a single component addition. This method not only simplifies the integration process but also confers the advantage of enabling us to update the Arbiter front-end independently, obviating the need for any modifications on the user’s end.
 
-***INSERT REACT IMG***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="50%" src="/img/casestudy/arbiter_code.png" alt="Video Conferencing" />
 
 ### Putting it All Together
 
 Together, these pieces make up Arbiter, which facilitates room-based conferencing to meet demand. Each component works together to reduce the complexity of implementing video conferencing so that a development team can focus on building their application.
 
-***FINAL DIAGRAM HERE***
-<img width="80%" src="/img/casestudy/frontend.png" alt="Video Conferencing" />
+<img width="98%" src="/img/casestudy/Full_Architecture.png" alt="Video Conferencing" />
 
 Walking through this diagram, the general flow of events for a user joining a call is:
 1) When the React application first interfaces with the HTTP API Gateway, it will attempt to find a room by first checking if a room exists. If a room exists for that route, the API will return the ID of the relevant SFU container.

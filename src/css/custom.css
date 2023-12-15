@@ -561,7 +561,9 @@ video {
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #f691c5;
+  /* --ifm-color-primary: #f691c5;
+   */
+  --ifm-color-primary: #f33798;
   --ifm-color-primary-dark: #f36db2;
   --ifm-color-primary-darker: #f25ba8;
   --ifm-color-primary-darkest: #ed258c;
@@ -594,6 +596,8 @@ video {
 
 .archi-img {
   width: 900px;
+  border-radius: 5px;
+  box-shadow: 0 0 12px 4px rgba(194, 194, 194, 0.5);
 }
 
 .code-img {
@@ -605,10 +609,6 @@ video {
   font-family: inter;
   font-size: 18px;
   line-height: 32px;
-}
-
-.markdown.img {
-  display: inline-block;
 }
 
 .footnotes h2 {
@@ -666,8 +666,6 @@ p {
 
 li {
   font-size: 16px;
-  font-family: Manrope, sans-serif;
-  font-weight: bold;
 }
 
 .table-of-contents li {
@@ -735,6 +733,10 @@ li {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-8 {
@@ -955,6 +957,11 @@ li {
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .bg-slate-50 {
@@ -1197,9 +1204,23 @@ li {
   transition-duration: 150ms;
 }
 
+#tech-talk:hover,
+#case-study:hover {
+  /* color: rgb(255, 0, 221);
+  border-color: rgb(255, 0, 221); */
+
+  color: #f33798;
+  border-color: #f33798;
+}
+
 .shadow-img {
   border-radius: 5px;
-  box-shadow: 0 0 7px grey;
+  box-shadow: 0 0 10px grey;
+}
+
+.shadow-video {
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgb(139, 139, 139);
 }
 
 .hover\:border-gray-300:hover {
@@ -1223,6 +1244,17 @@ li {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1386,6 +1418,26 @@ html[data-theme='light'] footer * {
 
 html[data-theme='dark'] footer {
   background-color: rgb(36, 37, 38);
+}
+
+html[data-theme='dark'] .sectionA {
+  background-color: rgb(40, 42, 44);
+}
+
+html[data-theme='dark'] .sectionB {
+  background-color: rgb(26, 27, 27);
+}
+
+html[data-theme='dark'] .lp-para {
+  color: rgb(233, 232, 232);
+}
+
+html[data-theme='dark'] .lp-name {
+  color: rgb(227, 227, 227);
+}
+
+html[data-theme='dark'] .lp-h2 {
+  color: rgb(255, 255, 255);
 }
 
 .svg {

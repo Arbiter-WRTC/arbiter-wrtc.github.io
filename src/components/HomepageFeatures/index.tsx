@@ -261,7 +261,7 @@ export default function HomepageFeatures(): JSX.Element {
                 </p>
                 <div class="flex gap-1 mx-auto mt-4">
                   <a
-                    href="https://tfrye.dev/"
+                    href="https://tylerfrye.dev/"
                     target="_blank"
                     class="inline-block text-indigo-600 hover:text-indigo-400 dark:text-indigo-300 dark:hover:text-indigo-100"
                   >
@@ -332,7 +332,7 @@ export default function HomepageFeatures(): JSX.Element {
                     </svg>
                   </a>
                   <a
-                    href="mailto:tyler.frye42@gmail.com"
+                    href="mailto:tyler@tylerfrye.dev"
                     class="inline-block text-indigo-600 hover:text-indigo-400 dark:text-indigo-300 dark:hover:text-indigo-100"
                   >
                     <svg
